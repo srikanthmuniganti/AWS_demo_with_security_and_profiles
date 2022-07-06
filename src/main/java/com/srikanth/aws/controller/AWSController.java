@@ -19,10 +19,11 @@ public class AWSController {
 	}
 	
 	@GetMapping("/message2")
+	@PreAuthorize("hasRole('USER')")
 	@ResponseBody
 	public String  getMessage2() {
 		
-		return "Welcome to <b> Srikanth Muniganti</b>'s Website";
+		return "Welcome to <b> Srikanth Muniganti message2 </b> Website";
 	}
 	
 }

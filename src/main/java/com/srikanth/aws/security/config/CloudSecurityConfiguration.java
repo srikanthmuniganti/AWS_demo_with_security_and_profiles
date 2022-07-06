@@ -38,7 +38,7 @@ public class CloudSecurityConfiguration extends WebSecurityConfigurerAdapter{
 			.authorizeRequests().anyRequest().authenticated()
 			.and()
 			.formLogin()
-			.defaultSuccessUrl("/api/message");
+			.defaultSuccessUrl("/api/message", true);
 	}
 
 }
